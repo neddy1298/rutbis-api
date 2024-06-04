@@ -1,4 +1,4 @@
-package neddyap.rutbisapi
+package neddyap.rutbisapi.config
 
 import neddyap.rutbisapi.entity.Bus
 import neddyap.rutbisapi.entity.Terminal

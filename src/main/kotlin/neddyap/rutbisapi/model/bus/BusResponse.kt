@@ -1,6 +1,5 @@
 package neddyap.rutbisapi.model.bus
 
-import neddyap.rutbisapi.entity.Terminal
 import java.util.*
 
 data class BusResponse (
@@ -11,7 +10,6 @@ data class BusResponse (
         val busIcon: String,
         val busImage: String,
         val price: Long,
-        val journeyList: List<Terminal>,
         val createdAt: Date,
         val updatedAt: Date?
 )

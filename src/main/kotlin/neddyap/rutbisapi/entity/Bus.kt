@@ -24,11 +24,6 @@ data class Bus(
     @Column(name = "price")
     var price: Long = 0,
 
-    @OneToMany(cascade = [CascadeType.ALL])
-    @JoinColumn(name = "busId", referencedColumnName = "busId")
-    var journeyList: List<Terminal> = mutableListOf(),
-
-
     @Column(name = "createdAt")
     @Temporal(TemporalType.TIMESTAMP)
     val createdAt: Date = Date(),

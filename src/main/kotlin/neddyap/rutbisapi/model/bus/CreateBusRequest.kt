@@ -3,7 +3,6 @@ package neddyap.rutbisapi.model.bus
 import jakarta.validation.constraints.Min
 import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.NotNull
-import neddyap.rutbisapi.entity.Terminal
 
 data class CreateBusRequest (
 
@@ -25,7 +24,4 @@ data class CreateBusRequest (
     @field:NotNull
     @field:Min(value = 1)
     val price: Long?,
-
-    @field:NotBlank
-    val journeyList: List<Terminal>?,
 )

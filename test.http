@@ -6,11 +6,11 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "busId": "TBGR01",
-  "terminalName": "Terminal 1",
-  "terminalLocation": "Bogor",
-  "terminalImage": "icon 1",
-  "serviceTime": "image 1"
+  "terminalId": "CGK",
+  "terminalName": "Soekarno-Hatta International Airport",
+  "terminalLocation": "Tangerang, Banten",
+  "terminalImage": "https://example.com/images/soekarno-hatta.jpg",
+  "serviceTime": "00:00 - 24:00"
 }
 
 ### Create Bus
@@ -21,13 +21,10 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "busId": "id",
-  "busLicense": "license",
-  "busName": "name",
-  "busIcon": "icon",
-  "busImage": "image",
-  "price": 200000,
-  "journeyList",
-  "createdAt": "date",
-  "updatedAt": "date"
+  "busId": "DAMRI001",
+  "busLicense": "B 1234 DAM",
+  "busName": "DAMRI",
+  "busIcon": "https://example.com/images/damri-icon.png",
+  "busImage": "https://example.com/images/damri-bus.jpg",
+  "price": 50000
 }

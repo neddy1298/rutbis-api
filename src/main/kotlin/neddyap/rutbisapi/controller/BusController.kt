@@ -1,6 +1,10 @@
 package neddyap.rutbisapi.controller
 
 import neddyap.rutbisapi.model.*
+import neddyap.rutbisapi.model.bus.BusResponse
+import neddyap.rutbisapi.model.bus.CreateBusRequest
+import neddyap.rutbisapi.model.bus.ListBusRequest
+import neddyap.rutbisapi.model.bus.UpdateBusRequest
 import neddyap.rutbisapi.service.BusService
 import org.springframework.web.bind.annotation.*
 

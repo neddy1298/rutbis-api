@@ -1,4 +1,4 @@
-package neddyap.rutbisapi.model
+package neddyap.rutbisapi.model.bus
 
 import jakarta.validation.constraints.Min
 import jakarta.validation.constraints.NotBlank

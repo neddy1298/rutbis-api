@@ -1,4 +1,4 @@
-package neddyap.rutbisapi.model
+package neddyap.rutbisapi.model.bus
 
 import neddyap.rutbisapi.entity.Terminal
 import java.util.*

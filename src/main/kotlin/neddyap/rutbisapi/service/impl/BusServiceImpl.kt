@@ -1,12 +1,12 @@
 package neddyap.rutbisapi.service.impl
 
 import neddyap.rutbisapi.error.NotFoundException
-import neddyap.rutbisapi.model.UpdateBusRequest
+import neddyap.rutbisapi.model.bus.UpdateBusRequest
 import neddyap.rutbisapi.repository.BusRepository
 import neddyap.rutbisapi.entity.Bus
-import neddyap.rutbisapi.model.BusResponse
-import neddyap.rutbisapi.model.CreateBusRequest
-import neddyap.rutbisapi.model.ListBusRequest
+import neddyap.rutbisapi.model.bus.BusResponse
+import neddyap.rutbisapi.model.bus.CreateBusRequest
+import neddyap.rutbisapi.model.bus.ListBusRequest
 import neddyap.rutbisapi.service.BusService
 import neddyap.rutbisapi.validation.ValidationUtil
 import org.springframework.data.domain.PageRequest
@@ -90,7 +90,7 @@ class BusServiceImpl(
         }
     }
 
-    private fun convertBusToBusResponse(bus: Bus): BusResponse{
+    private fun convertBusToBusResponse(bus: Bus): BusResponse {
         return BusResponse(
             busId = bus.busId,
             busLicense = bus.busLicense,

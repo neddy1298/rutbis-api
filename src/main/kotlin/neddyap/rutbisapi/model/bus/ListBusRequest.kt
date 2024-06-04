@@ -1,4 +1,4 @@
-package neddyap.rutbisapi.model
+package neddyap.rutbisapi.model.bus
 
 data class ListBusRequest(
     val page: Int,

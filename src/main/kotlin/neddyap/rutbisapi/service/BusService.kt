@@ -1,9 +1,9 @@
 package neddyap.rutbisapi.service
 
-import neddyap.rutbisapi.model.BusResponse
-import neddyap.rutbisapi.model.UpdateBusRequest
-import neddyap.rutbisapi.model.CreateBusRequest
-import neddyap.rutbisapi.model.ListBusRequest
+import neddyap.rutbisapi.model.bus.BusResponse
+import neddyap.rutbisapi.model.bus.UpdateBusRequest
+import neddyap.rutbisapi.model.bus.CreateBusRequest
+import neddyap.rutbisapi.model.bus.ListBusRequest
 
 interface BusService {
 

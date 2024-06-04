@@ -1,4 +1,4 @@
-FROM openjdk:21-jdk-slim
+FROM openjdk:23-jdk
 
 COPY build/libs/RutBisApi-0.0.1-SNAPSHOT.jar /app/application.jar
 

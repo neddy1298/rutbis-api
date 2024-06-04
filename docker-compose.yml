@@ -1,0 +1,19 @@
+services:
+  rutbis-api:
+    container_name: rutbis-api
+    image: rutbis-api:0.0.1
+    ports:
+      - "8081:8081"
+    environment:
+      DATABASE_USERNAME: rutbis
+      DATABASE_PASSWORD: rutbis123
+      DATABASE_URL: jdbc:postgresql://rutbis-api-postgres:5432/rutbis-api
+  rutbis-api-postgres:
+    container_name: rutbis-api-postgres
+    image: postgres:16
+    environment:
+      POSTGRES_USER: rutbis
+      POSTGRES_PASSWORD: rutbis123
+      POSTGRES_DB: rutbis-api
+    ports:
+      - "5432:5432"

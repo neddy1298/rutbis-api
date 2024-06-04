@@ -1,0 +1,33 @@
+### Create Terminal
+
+POST http://localhost:8080/api/terminal
+X-Api-Key: 1234
+Content-Type: application/json
+Accept: application/json
+
+{
+  "busId": "TBGR01",
+  "terminalName": "Terminal 1",
+  "terminalLocation": "Bogor",
+  "terminalImage": "icon 1",
+  "serviceTime": "image 1"
+}
+
+### Create Bus
+
+POST http://localhost:8080/api/bus
+X-Api-Key: 1234
+Content-Type: application/json
+Accept: application/json
+
+{
+  "busId": "id",
+  "busLicense": "license",
+  "busName": "name",
+  "busIcon": "icon",
+  "busImage": "image",
+  "price": 200000,
+  "journeyList",
+  "createdAt": "date",
+  "updatedAt": "date"
+}

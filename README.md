@@ -315,6 +315,247 @@ Request:
   "terminalId": "string",
   "price": "long",
   "departureTime": "time",
+  "arrivalTime": "time",
+  "createdAt": "date",
+  "updatedAt": "date"
+}
+```
+- Response:
+```json
+{
+  "code": "int",
+  "status": "string",
+  "data": {
+    "busId": "string",
+    "terminalId": "string",
+    "price": "long",
+    "departureTime": "time",
+    "arrivalTime": "time",
+    "createdAt": "date",
+    "updatedAt": "date"
+  }
+}
+```
+
+## Get Bus Terminal
+
+Request:
+- Method: GET
+- Endpoint: '/api/bus-terminal/{bus_terminal_id}'
+- Headers:
+  - Accept: application/json
+  - X-Api-Key: "api_key"
+- Response:
+```json
+{
+  "code": "int",
+  "status": "string",
+  "data": {
+    "busId": "string",
+    "terminalId": "string",
+    "price": "long",
+    "departureTime": "time",
+    "arrivalTime": "time",
+    "createdAt": "date",
+    "updatedAt": "date"
+  }
+}
+```
+
+## List Bus Terminal
+
+Request:
+- Method: GET
+- Endpoint: '/api/bus-terminals'
+- Headers:
+  - Accept: application/json
+  - X-Api-Key: "api_key"
+- Query Params:
+  - page: int
+  - size: int
+  - sort: string
+  - order: string
+- Response:
+```json
+{
+  "code": "int",
+  "status": "string",
+  "data": [
+    {
+      "busId": "string",
+      "terminalId": "string",
+      "price": "long",
+      "departureTime": "time",
+      "arrivalTime": "time",
+      "createdAt": "date",
+      "updatedAt": "date"
+    },
+    {
+      "busId": "string",
+      "terminalId": "string",
+      "price": "long",
+      "departureTime": "time",
+      "arrivalTime": "time",
+      "createdAt": "date",
+      "updatedAt": "date"
+    }
+  ]
+}
+```
+
+## Update Bus Terminal
+Request:
+- Method: PUT
+- Endpoint: '/api/bus-terminal/{bus_terminal_id}'
+- Headers:
+  - Content-Type: application/json
+  - Accept: application/json
+  - X-Api-Key: "api_key"
+- Body:
+```json
+{
+  "price": "long",
+  "departureTime": "time",
   "arrivalTime": "time"
 }
 ```
+- Response:
+```json
+{
+  "code": "int",
+  "status": "string",
+  "data": {
+    "price": "long",
+    "departureTime": "time",
+    "arrivalTime": "time",
+    "updatedAt": "date"
+  }
+}
+```
+
+## Delete Bus Terminal
+Request:
+- Method: DELETE
+- Endpoint: '/api/bus-terminal/{bus_terminal_id}'
+- Headers:
+  - Accept: application/json
+  - X-Api-Key: "api_key"
+- Response:
+```json
+{
+    "code": "int",
+    "status": "string"
+}
+```
+
+[//]: # (End of Bus Terminal API)
+
+[//]: # (Start of User API)
+
+## Create User
+Request:
+- Method: POST
+- Endpoint: '/api/user'
+- Headers:
+  - Content-Type: application/json
+  - Accept: application/json
+- Body:
+```json
+{
+  "email": "string",
+  "password": "string",
+  "fullName": "string",
+  "avatar": "string"
+}
+```
+- Response:
+```json
+{
+  "code": "int",
+  "status": "string",
+  "data": {
+    "userId": "string",
+    "email": "string",
+    "fullName": "string",
+    "avatar": "string",
+    "createdAt": "date",
+    "updatedAt": "date"
+  }
+}
+```
+
+## Get User
+
+Request:
+- Method: GET
+- Endpoint: '/api/user/{user_id}'
+- Headers:
+  - Accept: application/json
+- Authorization
+  - Bearer: "token jwt"
+- Response:
+```json
+{
+  "code": "int",
+  "status": "string",
+  "data": {
+    "userId": "string",
+    "email": "string",
+    "fullName": "string",
+    "avatar": "string",
+    "createdAt": "date",
+    "updatedAt": "date"
+  }
+}
+```
+
+## Update User
+
+Request:
+- Method: PUT
+- Endpoint: '/api/user/{user_id}'
+- Headers:
+  - Content-Type: application/json
+  - Accept: application/json
+- Authorization
+  - Bearer: "token jwt"
+- Body:
+```json
+{
+  "email": "string",
+  "fullName": "string",
+  "avatar": "string"
+}
+```
+- Response:
+```json
+{
+  "code": "int",
+  "status": "string",
+  "data": {
+    "email": "string",
+    "fullName": "string",
+    "avatar": "string",
+    "updatedAt": "date"
+  }
+}
+```
+
+## Delete User
+
+Request:
+- Method: DELETE
+- Endpoint: '/api/user/{user_id}'
+- Headers:
+  - Accept: application/json
+- Authorization
+  - Bearer: "token jwt"
+- Response:
+```json
+{
+    "code": "int",
+    "status": "string"
+}
+```
+
+[//]: # (End of User API)

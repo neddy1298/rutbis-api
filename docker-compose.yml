@@ -1,9 +1,9 @@
 services:
   rutbis-api:
     container_name: rutbis-api
-    image: rutbis-api:0.0.1
+    image: neddy1298/rutbis-api:0.1.0
     ports:
-      - "8081:8081"
+      - "8080:8080"
     environment:
       DATABASE_USERNAME: rutbis
       DATABASE_PASSWORD: rutbis123

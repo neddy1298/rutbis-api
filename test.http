@@ -1,7 +1,7 @@
 ### Create Terminal
 
 POST http://localhost:8080/api/terminal
-X-Api-Key: 1234
+X-Api-Key: rutbis123
 Content-Type: application/json
 Accept: application/json
 
@@ -16,7 +16,7 @@ Accept: application/json
 ### Create Bus
 
 POST http://localhost:8080/api/bus
-X-Api-Key: 1234
+X-Api-Key: rutbis123
 Content-Type: application/json
 Accept: application/json
 
@@ -28,3 +28,9 @@ Accept: application/json
   "busImage": "https://example.com/images/damri-bus.jpg",
   "price": 50000
 }
+
+### Get All Terminals
+
+GET http://localhost:8080/api/journeys
+X-Api-Key: rutbis123
+Accept: application/json

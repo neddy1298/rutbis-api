@@ -337,11 +337,11 @@ Request:
 }
 ```
 
-## Get Bus Terminal
+## Get Journey
 
 Request:
 - Method: GET
-- Endpoint: '/api/bus-terminal/{bus_terminal_id}'
+- Endpoint: '/api/journey/{journey_id}'
 - Headers:
   - Accept: application/json
   - X-Api-Key: "api_key"
@@ -351,6 +351,7 @@ Request:
   "code": "int",
   "status": "string",
   "data": {
+    "journeyId": "string",
     "busId": "string",
     "terminalId": "string",
     "price": "long",
@@ -362,11 +363,11 @@ Request:
 }
 ```
 
-## List Bus Terminal
+## List Journey
 
 Request:
 - Method: GET
-- Endpoint: '/api/bus-terminals'
+- Endpoint: '/api/journeys'
 - Headers:
   - Accept: application/json
   - X-Api-Key: "api_key"
@@ -382,6 +383,7 @@ Request:
   "status": "string",
   "data": [
     {
+      "journeyId": "string",
       "busId": "string",
       "terminalId": "string",
       "price": "long",
@@ -391,6 +393,7 @@ Request:
       "updatedAt": "date"
     },
     {
+      "journeyId": "string",
       "busId": "string",
       "terminalId": "string",
       "price": "long",
@@ -403,10 +406,10 @@ Request:
 }
 ```
 
-## Update Bus Terminal
+## Update Journey
 Request:
 - Method: PUT
-- Endpoint: '/api/bus-terminal/{bus_terminal_id}'
+- Endpoint: '/api/journey/{journey_id}'
 - Headers:
   - Content-Type: application/json
   - Accept: application/json
@@ -414,6 +417,8 @@ Request:
 - Body:
 ```json
 {
+  "busId": "string",
+  "terminalId": "string",
   "price": "long",
   "departureTime": "time",
   "arrivalTime": "time"
@@ -425,6 +430,8 @@ Request:
   "code": "int",
   "status": "string",
   "data": {
+    "busId": "string",
+    "terminalId": "string",
     "price": "long",
     "departureTime": "time",
     "arrivalTime": "time",
@@ -433,10 +440,10 @@ Request:
 }
 ```
 
-## Delete Bus Terminal
+## Delete Journey
 Request:
 - Method: DELETE
-- Endpoint: '/api/bus-terminal/{bus_terminal_id}'
+- Endpoint: '/api/journey/{journey_id}'
 - Headers:
   - Accept: application/json
   - X-Api-Key: "api_key"

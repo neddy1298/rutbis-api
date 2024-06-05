@@ -4,20 +4,19 @@ import jakarta.persistence.*
 import java.util.Date
 
 @Entity
-@Table(name = "bus_terminal")
-data class BusTerminal(
+@Table(name = "journey")
+data class Journey(
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = 0,
+    val journeyId: String = "",
 
     @ManyToOne
     @JoinColumn(name = "terminal_id")
-    val terminalId: Terminal,
+    var terminalId: Terminal,
 
     @ManyToOne
     @JoinColumn(name = "bus_id")
-    val busId: Bus,
+    var busId: Bus,
 
     @Column(name = "price")
     var price: Long,
@@ -30,7 +29,7 @@ data class BusTerminal(
 
     @Column(name = "createdAt")
     @Temporal(TemporalType.TIMESTAMP)
-    val createdAt: Date = Date(),
+    var createdAt: Date = Date(),
 
     @Column(name = "updatedAt")
     @Temporal(TemporalType.TIMESTAMP)

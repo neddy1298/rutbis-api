@@ -1,10 +1,10 @@
 package neddyap.rutbisapi.config
 
 import neddyap.rutbisapi.entity.Bus
-import neddyap.rutbisapi.entity.BusTerminal
+import neddyap.rutbisapi.entity.Journey
 import neddyap.rutbisapi.entity.Terminal
 import neddyap.rutbisapi.repository.BusRepository
-import neddyap.rutbisapi.repository.BusTerminalRepository
+import neddyap.rutbisapi.repository.JourneyRepository
 import neddyap.rutbisapi.repository.TerminalRepository
 import org.springframework.boot.CommandLineRunner
 import org.springframework.context.annotation.Bean
@@ -15,7 +15,7 @@ import java.util.*
 class DataSeeder {
 
     @Bean
-    fun initDatabase(busRepository: BusRepository, terminalRepository: TerminalRepository, busTerminalRepository: BusTerminalRepository): CommandLineRunner {
+    fun initDatabase(busRepository: BusRepository, terminalRepository: TerminalRepository, journeyRepository: JourneyRepository): CommandLineRunner {
         return CommandLineRunner { _: Array<String?>? ->
             val terminals = listOf(
                 "Terminal Blok M", "Terminal Lebak Bulus", "Terminal Kalideres",
@@ -50,14 +50,15 @@ class DataSeeder {
                 )
                 busRepository.save(bus)
 
-                val busTerminal = BusTerminal(
+                val journey = Journey(
+                    journeyId = "JRN$i",
                     busId = bus,
                     terminalId = terminal,
                     price = 10000 * i.toLong(),
                     departureTime = Date(),
                     arrivalTime = Date()
                 )
-                busTerminalRepository.save(busTerminal)
+                journeyRepository.save(journey)
             }
         }
     }

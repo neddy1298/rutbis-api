@@ -1,17 +1,27 @@
 @startuml
 
 actor "User" as user
-node "Kotlin RESTful API" {
-    component "Controller" as controller
-    component "Service" as service
-    component "Repository" as repository
+node "Rutbis API" {
+    component "Bus Controller" as busController
+    component "Bus Service" as busService
+    component "Bus Repository" as busRepository
+
+    component "Terminal Controller" as terminalController
+    component "Terminal Service" as terminalService
+    component "Terminal Repository" as terminalRepository
 }
 
 database "PostgreSQL" as database
 
-user <--> controller
-controller <--> service
-service <--> repository
-repository <--> database
+user <--> busController
+busController <--> busService
+busService <--> busRepository
+busRepository <--> database
+
+
+user <--> terminalController
+terminalController <--> terminalService
+terminalService <--> terminalRepository
+terminalRepository <--> database
 
 @enduml

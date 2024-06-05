@@ -1,7 +1,6 @@
 package neddyap.rutbisapi.entity
 
 import jakarta.persistence.*
-import java.sql.Time
 import java.util.Date
 
 @Entity

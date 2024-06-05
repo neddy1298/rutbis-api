@@ -37,3 +37,6 @@ out/
 
 ### Kotlin ###
 .kotlin
+
+### Docker ###
+Dockerfile

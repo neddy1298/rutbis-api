@@ -9,7 +9,6 @@ data class BusResponse (
         val busName: String,
         val busIcon: String,
         val busImage: String,
-        val price: Long,
         val createdAt: Date,
         val updatedAt: Date?
 )

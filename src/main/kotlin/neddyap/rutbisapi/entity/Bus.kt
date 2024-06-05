@@ -21,9 +21,6 @@ data class Bus(
     @Column(name = "busImage")
     var busImage: String = "",
 
-    @Column(name = "price")
-    var price: Long = 0,
-
     @Column(name = "createdAt")
     @Temporal(TemporalType.TIMESTAMP)
     val createdAt: Date = Date(),

@@ -1,6 +1,8 @@
 package neddyap.rutbisapi.entity
 
 import jakarta.persistence.*
+import java.sql.Time
+import java.util.Date
 
 @Entity
 @Table(name = "bus_terminal")
@@ -12,9 +14,27 @@ data class BusTerminal(
 
     @ManyToOne
     @JoinColumn(name = "terminal_id")
-    val terminal: Terminal,
+    val terminalId: Terminal,
 
     @ManyToOne
     @JoinColumn(name = "bus_id")
-    val bus: Bus
+    val busId: Bus,
+
+    @Column(name = "price")
+    var price: Long,
+
+    @Column(name = "departure_time")
+    var departureTime: Date,
+
+    @Column(name = "arrival_time")
+    var arrivalTime: Date,
+
+    @Column(name = "createdAt")
+    @Temporal(TemporalType.TIMESTAMP)
+    val createdAt: Date = Date(),
+
+    @Column(name = "updatedAt")
+    @Temporal(TemporalType.TIMESTAMP)
+    var updatedAt: Date? = Date()
+
 )

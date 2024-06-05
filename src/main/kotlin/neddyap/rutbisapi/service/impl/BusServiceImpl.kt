@@ -30,7 +30,6 @@ class BusServiceImpl(
             busName = createBusRequest.busName!!,
             busIcon = createBusRequest.busIcon!!,
             busImage = createBusRequest.busImage!!,
-            price = createBusRequest.price!!,
             createdAt = Date(),
             updatedAt = null
         )
@@ -57,7 +56,6 @@ class BusServiceImpl(
             busName = updateBusRequest.busName!!
             busIcon = updateBusRequest.busIcon!!
             busImage = updateBusRequest.busImage!!
-            price = updateBusRequest.price!!
             updatedAt = Date()
         }
 
@@ -95,7 +93,6 @@ class BusServiceImpl(
             busName = bus.busName,
             busIcon = bus.busIcon,
             busImage = bus.busImage,
-            price = bus.price,
             createdAt = bus.createdAt,
             updatedAt = bus.updatedAt
         )

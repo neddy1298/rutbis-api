@@ -20,8 +20,4 @@ data class CreateBusRequest (
 
     @field:NotBlank
     val busImage: String?,
-
-    @field:NotNull
-    @field:Min(value = 1)
-    val price: Long?,
 )

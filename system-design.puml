@@ -1,10 +1,15 @@
 @startuml
 
-actor "User" as user
+actor "RutBis" as rubis
+
 node "Rutbis API" {
     component "Bus Controller" as busController
     component "Bus Service" as busService
     component "Bus Repository" as busRepository
+
+    component "Journey Controller" as journeyController
+    component "Journey Service" as journeyService
+    component "Journey Repository" as journeyRepository
 
     component "Terminal Controller" as terminalController
     component "Terminal Service" as terminalService
@@ -13,13 +18,19 @@ node "Rutbis API" {
 
 database "PostgreSQL" as database
 
-user <--> busController
+rubis <--> busController
 busController <--> busService
 busService <--> busRepository
 busRepository <--> database
 
+rubis <--> journeyController
+journeyController <--> journeyService
+journeyService <--> journeyRepository
+journeyService --> terminalRepository
+journeyService --> busRepository
+journeyRepository <--> database
 
-user <--> terminalController
+rubis <--> terminalController
 terminalController <--> terminalService
 terminalService <--> terminalRepository
 terminalRepository <--> database

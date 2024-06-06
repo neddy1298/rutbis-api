@@ -15,6 +15,9 @@ data class Terminal(
     @Column(name = "terminalLocation")
     var terminalLocation: String = "",
 
+    @Column(name = "teminalIcon")
+    var terminalIcon: String = "",
+
     @Column(name = "terminalImage")
     var terminalImage: String = "",
 

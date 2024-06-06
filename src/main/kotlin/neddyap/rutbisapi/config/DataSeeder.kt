@@ -36,6 +36,7 @@ class DataSeeder {
                     terminalId = "TRM$i",
                     terminalName = terminals[i-1],
                     terminalLocation = "Jakarta",
+                    terminalIcon = "https://example.com/images/terminal-icon.png",
                     terminalImage = "https://example.com/images/terminal.jpg",
                     serviceTime = "00:00 - 24:00"
                 )

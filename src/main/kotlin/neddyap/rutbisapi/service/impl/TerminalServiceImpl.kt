@@ -28,6 +28,7 @@ class TerminalServiceImpl(
             terminalId = createTerminalRequest.terminalId,
             terminalName = createTerminalRequest.terminalName!!,
             terminalLocation = createTerminalRequest.terminalLocation!!,
+            terminalIcon = createTerminalRequest.terminalIcon!!,
             terminalImage = createTerminalRequest.terminalImage!!,
             serviceTime = createTerminalRequest.serviceTime!!,
             createdAt = Date(),
@@ -54,6 +55,7 @@ class TerminalServiceImpl(
         terminal.apply {
             terminalName = updateTerminalRequest.terminalName!!
             terminalLocation = updateTerminalRequest.terminalLocation!!
+            terminalIcon = updateTerminalRequest.terminalIcon!!
             terminalImage = updateTerminalRequest.terminalImage!!
             serviceTime = updateTerminalRequest.serviceTime!!
             updatedAt = Date()
@@ -91,6 +93,7 @@ class TerminalServiceImpl(
             terminalId = terminal.terminalId,
             terminalName = terminal.terminalName,
             terminalLocation = terminal.terminalLocation,
+            terminalIcon = terminal.terminalIcon,
             terminalImage = terminal.terminalImage,
             serviceTime = terminal.serviceTime,
             createdAt = Date(),

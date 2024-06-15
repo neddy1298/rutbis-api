@@ -16,7 +16,7 @@ class BusController(val busService: BusService) {
         produces = ["application/json"],
         consumes = ["application/json"]
     )
-    fun createBusId(@RequestBody body: CreateBusRequest): WebResponse<BusResponse> {
+    fun createBus(@RequestBody body: CreateBusRequest): WebResponse<BusResponse> {
         val busResponse = busService.create(body)
         return WebResponse(
             code = 200,
@@ -26,7 +26,7 @@ class BusController(val busService: BusService) {
     }
 
     @GetMapping(
-        value = ["/api/buses/{busId}"],
+        value = ["/api/bus/{busId}"],
         produces = ["application/json"]
     )
 
@@ -40,7 +40,7 @@ class BusController(val busService: BusService) {
     }
 
     @PutMapping(
-        value = ["/api/buses/{busId}"],
+        value = ["/api/bus/{busId}"],
         produces = ["application/json"],
         consumes = ["application/json"]
     )
@@ -54,7 +54,7 @@ class BusController(val busService: BusService) {
     }
 
     @DeleteMapping(
-        value = ["/api/buses/{busId}"],
+        value = ["/api/bus/{busId}"],
         produces = ["application/json"]
     )
     fun deleteBus(@PathVariable("busId") id: String): WebResponse<String>{

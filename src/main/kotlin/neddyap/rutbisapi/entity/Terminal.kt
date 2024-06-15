@@ -4,7 +4,7 @@ import jakarta.persistence.*
 import java.util.Date
 
 @Entity
-@Table(name = "terminal")
+@Table(name = "tbl_terminal")
 data class Terminal(
     @Id
     val terminalId: String = "",
@@ -16,7 +16,7 @@ data class Terminal(
     var terminalLocation: String = "",
 
     @Column(name = "teminalIcon")
-    var terminalIcon: String = "",
+    var terminalIcon: Int,
 
     @Column(name = "terminalImage")
     var terminalImage: String = "",

@@ -11,7 +11,7 @@ data class UpdateBusRequest(
     val busName: String?,
 
     @field:NotBlank
-    val busIcon: String?,
+    val busIcon: Int?,
 
     @field:NotBlank
     val busImage: String?,

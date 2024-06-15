@@ -88,6 +88,24 @@ class JourneyServiceImpl(
         return journeys.map { convertJourneyToJourneyResponse(it) }
     }
 
+    override fun listByBusId(busId: String): List<JourneyResponse> {
+        val bus = busRepository.findByIdOrNull(busId)
+            ?: throw NotFoundException()
+
+        val journeys = journeyRepository.findByBusId(bus)
+
+        return journeys.map { convertJourneyToJourneyResponse(it) }
+    }
+
+    override fun listByTerminalId(terminalId: String): List<JourneyResponse> {
+        val terminal = terminalRepository.findByIdOrNull(terminalId)
+            ?: throw NotFoundException()
+
+        val journeys = journeyRepository.findByTerminalId(terminal)
+
+        return journeys.map { convertJourneyToJourneyResponse(it) }
+    }
+
     private fun findJourneyByIdOrThrowNotFound(id: String): Journey {
         val journey = journeyRepository.findByIdOrNull(id)
         if (journey == null) {

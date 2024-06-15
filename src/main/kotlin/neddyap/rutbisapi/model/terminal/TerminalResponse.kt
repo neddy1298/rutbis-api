@@ -7,7 +7,7 @@ data class TerminalResponse (
         val terminalId: String,
         val terminalName: String,
         val terminalLocation: String,
-        val terminalIcon: String,
+        val terminalIcon: Int,
         val terminalImage: String,
         val serviceTime: String,
         val createdAt: Date,

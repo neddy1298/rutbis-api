@@ -16,7 +16,7 @@ class TerminalController(val terminalService: TerminalService) {
         produces = ["application/json"],
         consumes = ["application/json"]
     )
-    fun createTerminalId(@RequestBody body: CreateTerminalRequest): WebResponse<TerminalResponse> {
+    fun createTerminal(@RequestBody body: CreateTerminalRequest): WebResponse<TerminalResponse> {
         val terminalResponse = terminalService.create(body)
         return WebResponse(
             code = 200,
@@ -26,7 +26,7 @@ class TerminalController(val terminalService: TerminalService) {
     }
 
     @GetMapping(
-        value = ["/api/terminals/{terminalId}"],
+        value = ["/api/terminal/{terminalId}"],
         produces = ["application/json"]
     )
     fun getTerminal(@PathVariable("terminalId") id: String): WebResponse<TerminalResponse>{
@@ -39,7 +39,7 @@ class TerminalController(val terminalService: TerminalService) {
     }
 
     @PutMapping(
-        value = ["/api/terminals/{terminalId}"],
+        value = ["/api/terminal/{terminalId}"],
         produces = ["application/json"],
         consumes = ["application/json"]
     )
@@ -53,7 +53,7 @@ class TerminalController(val terminalService: TerminalService) {
     }
 
     @DeleteMapping(
-        value = ["/api/terminals/{terminalId}"],
+        value = ["/api/terminal/{terminalId}"],
         produces = ["application/json"]
     )
     fun deleteTerminal(@PathVariable("terminalId") id: String): WebResponse<String>{

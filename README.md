@@ -28,7 +28,7 @@ Request:
     "busId": "string",
     "busLicense": "string",
     "busName": "string",
-    "busIcon": "string",
+    "busIcon": "int",
     "busImage": "string",
     "createdAt": "date",
     "updatedAt": "date"
@@ -53,7 +53,7 @@ Request:
     "busId": "string",
     "busLicense": "string",
     "busName": "string",
-    "busIcon": "string",
+    "busIcon": "int",
     "busImage": "string",
     "createdAt": "date",
     "updatedAt": "date"
@@ -85,7 +85,7 @@ Request:
       "busId": "string",
       "busLicense": "string",
       "busName": "string",
-      "busIcon": "string",
+      "busIcon": "int",
       "busImage": "string",
       "createdAt": "date",
       "updatedAt": "date"
@@ -94,7 +94,7 @@ Request:
       "busId": "string",
       "busLicense": "string",
       "busName": "string",
-      "busIcon": "string",
+      "busIcon": "int",
       "busImage": "string",
       "createdAt": "date",
       "updatedAt": "date"
@@ -116,7 +116,7 @@ Request:
 {
   "busLicense": "string",
   "busName": "string",
-  "busIcon": "string",
+  "busIcon": "int",
   "busImage": "string"
 }
 ```
@@ -128,7 +128,7 @@ Request:
   "data": {
     "busLicense": "string",
     "busName": "string",
-    "busIcon": "string",
+    "busIcon": "int",
     "busImage": "string",
     "updatedAt": "date"
   }
@@ -173,6 +173,7 @@ Request:
     "terminalId": "string",
     "terminalName": "string",
     "terminalLocation": "string",
+    "terminalIcon": "int",
     "terminalImage": "string",
     "serviceTime": "time",
     "createdAt": "date",
@@ -198,6 +199,7 @@ Request:
     "terminalId": "string",
     "terminalName": "string",
     "terminalLocation": "string",
+    "terminalIcon": "int",
     "terminalImage": "string",
     "serviceTime": "time",
     "createdAt": "date",
@@ -229,6 +231,7 @@ Request:
       "terminalId": "string",
       "terminalName": "string",
       "terminalLocation": "string",
+      "terminalIcon": "int",
       "terminalImage": "string",
       "serviceTime": "time",
       "createdAt": "date",
@@ -238,6 +241,7 @@ Request:
       "terminalId": "string",
       "terminalName": "string",
       "terminalLocation": "string",
+      "terminalIcon": "int",
       "terminalImage": "string",
       "serviceTime": "time",
       "createdAt": "date",
@@ -259,13 +263,14 @@ Request:
   - X-Api-Key: "api_key"
 - Body:
 ```json
-  {
-    "terminalName": "string",
-    "terminalLocation": "string",
-    "terminalImage": "string",
-    "serviceTime": "time"
-  }
-  ```
+{
+  "terminalName": "string",
+  "terminalLocation": "string",
+  "terminalIcon": "int",
+  "terminalImage": "string",
+  "serviceTime": "time"
+}
+```
 - Response:
 ```json
 {
@@ -274,6 +279,7 @@ Request:
   "data": {
     "terminalName": "string",
     "terminalLocation": "string",
+    "terminalIcon": "int",
     "terminalImage": "string",
     "serviceTime": "time",
     "updatedAt": "date"
@@ -469,10 +475,10 @@ Request:
 - Body:
 ```json
 {
-  "email": "string",
-  "password": "string",
-  "fullName": "string",
-  "avatar": "string"
+  "userName": "string",
+  "userEmail": "string",
+  "userPassword": "string",
+  "userAvatar": "int"
 }
 ```
 - Response:
@@ -482,9 +488,10 @@ Request:
   "status": "string",
   "data": {
     "userId": "string",
-    "email": "string",
-    "fullName": "string",
-    "avatar": "string",
+    "userName": "string",
+    "userEmail": "string",
+    "userPassword": "string",
+    "userAvatar": "int",
     "createdAt": "date",
     "updatedAt": "date"
   }
@@ -507,9 +514,10 @@ Request:
   "status": "string",
   "data": {
     "userId": "string",
-    "email": "string",
-    "fullName": "string",
-    "avatar": "string",
+    "userName": "string",
+    "userEmail": "string",
+    "userPassword": "string",
+    "userAvatar": "int",
     "createdAt": "date",
     "updatedAt": "date"
   }
@@ -529,9 +537,10 @@ Request:
 - Body:
 ```json
 {
-  "email": "string",
-  "fullName": "string",
-  "avatar": "string"
+  "userName": "string",
+  "userEmail": "string",
+  "userPassword": "string",
+  "userAvatar": "int"
 }
 ```
 - Response:
@@ -540,9 +549,10 @@ Request:
   "code": "int",
   "status": "string",
   "data": {
-    "email": "string",
-    "fullName": "string",
-    "avatar": "string",
+    "userName": "string",
+    "userEmail": "string",
+    "userPassword": "string",
+    "userAvatar": "int",
     "updatedAt": "date"
   }
 }

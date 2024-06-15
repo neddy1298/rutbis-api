@@ -16,7 +16,7 @@ class JourneyController(val journeyService: JourneyService) {
         produces = ["application/json"],
         consumes = ["application/json"]
     )
-    fun createJourneyId(@RequestBody body: CreateJourneyRequest): WebResponse<JourneyResponse> {
+    fun createJourney(@RequestBody body: CreateJourneyRequest): WebResponse<JourneyResponse> {
         val journeyResponse = journeyService.create(body)
         return WebResponse(
             code = 200,
@@ -26,7 +26,7 @@ class JourneyController(val journeyService: JourneyService) {
     }
 
     @GetMapping(
-        value = ["/api/journeys/{journeyId}"],
+        value = ["/api/journey/{journeyId}"],
         produces = ["application/json"]
     )
     fun getJourney(@PathVariable("journeyId") id: String): WebResponse<JourneyResponse>{
@@ -39,7 +39,7 @@ class JourneyController(val journeyService: JourneyService) {
     }
 
     @PutMapping(
-        value = ["/api/journeys/{journeyId}"],
+        value = ["/api/journey/{journeyId}"],
         produces = ["application/json"],
         consumes = ["application/json"]
     )
@@ -53,7 +53,7 @@ class JourneyController(val journeyService: JourneyService) {
     }
 
     @DeleteMapping(
-        value = ["/api/journeys/{journeyId}"],
+        value = ["/api/journey/{journeyId}"],
         produces = ["application/json"]
     )
     fun deleteJourney(@PathVariable("journeyId") id: String): WebResponse<String>{
@@ -73,6 +73,32 @@ class JourneyController(val journeyService: JourneyService) {
                     @RequestParam(value = "page", defaultValue = "0")page: Int): WebResponse<List<JourneyResponse>>{
         val request = ListJourneyRequest(page = page, size = size)
         val responses = journeyService.list(request)
+        return WebResponse(
+            code = 200,
+            status = "OK",
+            data = responses
+        )
+    }
+
+    @GetMapping(
+        value = ["/api/journeys/bus/{busId}"],
+        produces = ["application/json"]
+    )
+    fun listJourneyByBus(@PathVariable("busId") busId: String): WebResponse<List<JourneyResponse>>{
+        val responses = journeyService.listByBusId(busId)
+        return WebResponse(
+            code = 200,
+            status = "OK",
+            data = responses
+        )
+    }
+
+    @GetMapping(
+        value = ["/api/journeys/terminal/{terminalId}"],
+        produces = ["application/json"]
+    )
+    fun listJourneyByTerminal(@PathVariable("terminalId") terminalId: String): WebResponse<List<JourneyResponse>>{
+        val responses = journeyService.listByTerminalId(terminalId)
         return WebResponse(
             code = 200,
             status = "OK",

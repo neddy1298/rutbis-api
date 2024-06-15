@@ -4,7 +4,7 @@ import jakarta.persistence.*
 import java.util.Date
 
 @Entity
-@Table(name = "journey")
+@Table(name = "tbl_journey")
 data class Journey(
 
     @Id

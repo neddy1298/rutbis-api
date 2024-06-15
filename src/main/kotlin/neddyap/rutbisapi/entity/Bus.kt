@@ -4,7 +4,7 @@ import jakarta.persistence.*
 import java.util.Date
 
 @Entity
-@Table(name = "bus")
+@Table(name = "tbl_bus")
 data class Bus(
     @Id
     val busId: String = "",
@@ -16,7 +16,7 @@ data class Bus(
     var busName: String = "",
 
     @Column(name = "busIcon")
-    var busIcon: String = "",
+    var busIcon: Int,
 
     @Column(name = "busImage")
     var busImage: String = "",

@@ -7,7 +7,7 @@ data class BusResponse (
         val busId: String,
         val busLicense: String,
         val busName: String,
-        val busIcon: String,
+        val busIcon: Int,
         val busImage: String,
         val createdAt: Date,
         val updatedAt: Date?

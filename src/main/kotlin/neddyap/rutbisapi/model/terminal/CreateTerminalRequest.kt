@@ -14,7 +14,7 @@ data class CreateTerminalRequest (
     val terminalLocation: String?,
 
     @field:NotBlank
-    val terminalIcon: String?,
+    val terminalIcon: Int?,
 
     @field:NotBlank
     val terminalImage: String?,

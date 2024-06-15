@@ -16,4 +16,8 @@ interface JourneyService {
     fun delete(id: String)
 
     fun list(listJourneyRequest: ListJourneyRequest): List<JourneyResponse>
+
+    fun listByBusId(busId: String): List<JourneyResponse>
+
+    fun listByTerminalId(terminalId: String): List<JourneyResponse>
 }
